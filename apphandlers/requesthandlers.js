@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 class MainHandler {
   static get(request, result) {
     var context = {a: '', b: ''};
@@ -31,4 +33,24 @@ class TestHandler {
   }
 }
 
-module.exports = {MainHandler, AdminPageHandler, TestHandler};
+class PostHandler {
+  static get(request, result) {
+    var _id = request.query.id;
+    fs.readFile('./posts.json', function(err, data) {
+      if (err) throw err;
+      if (!_id) {
+        const context = {
+          posts: JSON.parse(data)
+        }
+        return result.render('postsview.liquid', context);
+      } else {
+        const context = {
+          post: JSON.parse(data)[_id]
+        }
+        return result.render('singlepostview.liquid', context);
+      }
+    });
+  }
+}
+
+module.exports = {MainHandler, AdminPageHandler, TestHandler, PostHandler};
