@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <h1>Welcome to the Admin Page! {{user.username}}</h1>
+    {%if not user.logged%}
+    <h3>Opps, seems like you're not logged in!</h3>
+    {%else%}
+    <h3>Nice, you're logged in.</h3>
+    {%endif%}
+    <hr>
+    <form method="post">
+      <input type="text" name="page">
+      <input type="submit">
+    </form>
+  </body>
+</html>
