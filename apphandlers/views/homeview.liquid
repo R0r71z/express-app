@@ -1,8 +1,6 @@
 {%extends baseview.liquid%}
 {%assign title = "Home"%}
 {%block content%}
-<form method="post">
-  <h1>Get to the admin page</h1>
-  <button type="submit">Go!</button>
-</form>
+<a href="/admin"><button>Admin Page</button></a>
+<a href="/posts"><button>Posts</button></a>
 {%endblock%}
