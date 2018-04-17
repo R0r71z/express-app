@@ -29,10 +29,6 @@ app.set('views', './apphandlers/views');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// static route
-
-app.use(express.static('./apphandlers/static'))
-
 module.exports = {
   Start: function() {
     app.listen(port, hostname, function() {

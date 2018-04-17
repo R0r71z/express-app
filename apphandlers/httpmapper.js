@@ -1,11 +1,10 @@
-const {MainHandler, AdminPageHandler, TestHandler, PostHandler} = require('./requesthandlers')
+const {MainHandler, AdminPageHandler, TestHandler} = require('./requesthandlers')
 
 const methodMapper = function(app) {
   const handlers = {
     '/': MainHandler,
     '/admin': AdminPageHandler,
     '/test/:keycode': TestHandler,
-    '/posts': PostHandler,
   }
 
   for (path in handlers) {
