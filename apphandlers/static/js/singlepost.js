@@ -23,8 +23,8 @@ $(document).ready(function() {
     .text('Cancel')
     .off('click')
     .click(function() {
-      $('.title-editor').attr('type', 'hidden');
-      $('.content-editor').attr('type', 'hidden');
+      $('.title-editor').val(title_elem.text()).attr('type', 'hidden');
+      $('.content-editor').val(content_elem.text()).attr('type', 'hidden');
       $('.save-post')
       .attr('class', 'edit-post')
       .text('Edit')

@@ -6,14 +6,10 @@
 {%endblock%}
 
 {%block content%}
-<div id="post_{{post.id}}_title" class="single-post-title">
-  {{post.title}}
-</div>
+<div id="post_{{post.id}}_title" class="single-post-title">{{post.title}}</div>
 <input class="title-editor" value="{{post.title}}" type="hidden"></input>
 
-<div id="post_{{post.id}}_content" class="single-post-content">
-  {{post.content}}
-</div>
+<div id="post_{{post.id}}_content" class="single-post-content">{{post.content}}</div>
 
 <input class="content-editor" value="{{post.content}}" type="hidden"></input>
 
