@@ -5,5 +5,11 @@
   </head>
   <body>
     <b><h1>Take a look at this cool division: {{testword|split:""|join:"|"}}</h1></b>
+    <ul>
+    	{% for user in user_list %}
+    		<li><ul>{{user.ID}}, {{user.USERNAME}}, {{user.AGE}}...</ul></li>
+    	{% endfor %}
+    	<img src="/data/{{img._id}}">
+    </ul>
   </body>
 </html>

@@ -1,21 +1,21 @@
 {
-  "name": "EAPP",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "express",
+  "version": "0.0.0",
+  "private": true,
   "dependencies": {
-    "express": "^4.16.2"
+    "keystone": "4.0.0-beta.5",
+    "lodash": "^4.13.1",
+    "pug": "2.0.0-beta11",
+    "dotenv": "4.0.0",
+    "async": "2.1.4"
   },
   "devDependencies": {
-    "body-parser": "^1.18.2",
-    "express-liquid": "^0.2.6",
-    "nodemon": "^1.15.1"
+    "eslint": "3.15.0",
+    "eslint-config-keystone": "3.0.0",
+    "eslint-plugin-react": "^5.1.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node keystone.js"
   }
 }
