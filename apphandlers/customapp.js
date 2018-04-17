@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const app = express();
-const [hostname,port] = ['0.0.0.0', process.env.PORT];
+const [hostname,port] = ['0.0.0.0', 8080];
 
 // Setting Express-Liquid as View Engine
 var expressLiquid = require('express-liquid');
