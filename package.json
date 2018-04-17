@@ -16,7 +16,6 @@
   "devDependencies": {
     "body-parser": "^1.18.2",
     "express-liquid": "^0.2.6",
-    "jquery": "^3.3.1",
     "nodemon": "^1.15.1"
   }
 }
