@@ -37,7 +37,7 @@ class TestHandler {
 class PostHandler {
   static get(request, result) {
     var _id = request.query.id;
-    fs.readFile('../posts.json', function(err, data) {
+    fs.readFile('./posts.json', function(err, data) {
       if (err) throw err;
       if (_id) {
         const context = {
@@ -58,7 +58,7 @@ class PostHandler {
   static post(request, result) {
     var _id = request.body.id;
     var _action = request.body.action;
-    fs.readFile('../posts.json', function(err, data) {
+    fs.readFile('./posts.json', function(err, data) {
       var src = JSON.parse(data);
       if (err) throw err;
 
@@ -82,7 +82,7 @@ class PostHandler {
             id: _id
           }
       }
-      fs.writeFile('../posts.json', JSON.stringify(src), 'utf8', function(err) {
+      fs.writeFile('./posts.json', JSON.stringify(src), 'utf8', function(err) {
         if(err) throw err;
         result.send({id: _id});
       })
